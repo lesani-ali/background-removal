@@ -1,7 +1,7 @@
 from typing import Dict, Any
 from PIL import Image
-from models.saliency import SaliencyDetectionModel
-from models.depth import DepthModel
+from background_removal.models.saliency import SaliencyDetectionModel
+from background_removal.models.depth import DepthModel
 from util.postprocessing_utils import (
     add_missed_info,
     remove_farther_objects
@@ -35,6 +35,12 @@ class BackgroundRemovalPipeline(object):
         no_background_img = add_missed_info(
             depth_map, saliency_img, image,
             self.config.recover_info_threshold
+        )
+
+        # Step 4: Remove further objects
+        no_background_img = remove_farther_objects(
+            depth_map, no_background_img,
+            self.config.ignore_info_threshold
         )
 
         return no_background_img

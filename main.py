@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore")  # Suppress all warnings
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description='Run segmentation pipeline.')
+    parser = argparse.ArgumentParser(description='Run background removal pipeline.')
     parser.add_argument(
         '--config-dir', type=str, default='./config/config.yaml',
         help='Path to the configuration file.'

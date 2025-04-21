@@ -3,7 +3,7 @@ from PIL import Image
 import numpy as np
 import os
 import logging
-from pipeline.pipeline import BackgroundRemovalPipeline
+from background_removal.pipeline.pipeline import BackgroundRemovalPipeline
 
 
 def load_image(image_path: str) -> Image.Image:

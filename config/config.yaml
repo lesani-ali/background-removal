@@ -9,13 +9,9 @@ models:
 
 
 recover_info_threshold: 140 # This is a depth threshold: Any pixel having depth value greater than this threshold will be considered as recoverable information
-ignore_info_threshold: 80 # This is a depth threshold: Any pixel having depth value greater than this threshold will be considered as recoverable information
+ignore_info_threshold: 80 # This is a depth threshold: Any pixel having depth value less than this threshold will be considered as negligible information
 
-
-input_img_dir: "/home/ali-lesani/CViSS/Background-removal/data/input_images"
-output_img_dir: "/home/ali-lesani/CViSS/Background-removal/data/output_images"
-
-log_dir: "/home/ali-lesani/CViSS/Background-removal/logs"
+log_dir: "./logs"
 
 
 

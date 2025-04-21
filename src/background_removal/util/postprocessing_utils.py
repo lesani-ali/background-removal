@@ -29,25 +29,22 @@ def add_missed_info(
 
 def remove_farther_objects(
     depth_map: np.ndarray,
-    boxes: np.ndarray,
-    threshold: int
+    saliency_img: Image.Image,
+    threshold: int = 70
 ) -> np.ndarray:
     """
-    Remove objects that are farther away based on the depth map.
+    Remove information from the original image based on the depth map.
 
     :param depth_map: Depth map of the image.
-    :param image: Image to remove objects from.
-    :param threshold: Depth threshold to determine objects to remove.
-    :return: Image with farther objects removed.
+    :param saliency_img: Saliency image.
+    :param threshold: Depth threshold to determine negligible information.
+    :return: Updated saliency image with recovered information.
     """
-    keep_row = np.ones(len(boxes), dtype=bool)
-    for idx, (x1, y1, x2, y2) in enumerate(boxes):
-        x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
 
-        # Crop region
-        roi = depth_map[y1:y2, x1:x2]
+    saliency_img = np.array(saliency_img)
 
-        if np.mean(roi) < threshold:
-            keep_row[idx] = False
+    mask = depth_map < threshold
 
-    return boxes[keep_row]
+    saliency_img[mask] = [255, 255, 255]
+
+    return saliency_img

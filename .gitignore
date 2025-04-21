@@ -1,8 +1,10 @@
 data
 logs
-util/__pycache__
-pipeline/__pycache__
-models/__pycache__
+src/util/__pycache__
+src/pipeline/__pycache__
+src/models/__pycache__
+.DS_Store
+third_party_models/.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
