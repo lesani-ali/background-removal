@@ -1,0 +1,23 @@
+############### All models and their configurations are defined here
+models:
+  saliency:
+    mode: "base"
+    device: "cuda:0"
+  depth: 
+    ckpt: "LiheYoung/depth_anything_vitl14"
+    device: "cuda:0"
+
+
+recover_info_threshold: 140 # This is a depth threshold: Any pixel having depth value greater than this threshold will be considered as recoverable information
+ignore_info_threshold: 80 # This is a depth threshold: Any pixel having depth value greater than this threshold will be considered as recoverable information
+
+
+input_img_dir: "/home/ali-lesani/CViSS/Background-removal/data/input_images"
+output_img_dir: "/home/ali-lesani/CViSS/Background-removal/data/output_images"
+
+log_dir: "/home/ali-lesani/CViSS/Background-removal/logs"
+
+
+
+
+
