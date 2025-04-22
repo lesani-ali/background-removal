@@ -2,7 +2,7 @@ from typing import Dict, Any
 from PIL import Image
 from background_removal.models.saliency import SaliencyDetectionModel
 from background_removal.models.depth import DepthModel
-from util.postprocessing_utils import (
+from background_removal.util.postprocessing_utils import (
     add_missed_info,
     remove_farther_objects
 )
