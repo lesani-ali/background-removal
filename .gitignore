@@ -1,8 +1,10 @@
 data
 logs
-src/util/__pycache__
-src/pipeline/__pycache__
-src/models/__pycache__
+src/background_removal.egg-info
+src/background_removal/__pycache__
+src/background_removal/util/__pycache__
+src/background_removal/pipeline/__pycache__
+src/background_removal/models/__pycache__
 .DS_Store
 third_party_models/.DS_Store
 
