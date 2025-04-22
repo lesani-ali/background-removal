@@ -37,4 +37,8 @@ We use two third-party models: (1) [Transparent Background](https://github.com/p
 2. Run the tool:
     ```bash
     python main.py --input-img-dir "/path/to/input/images" --output-img-dir "/path/to/output/images"" 
+    
     ```
+
+## Note
+If you are not using a GPU, please set the device type to CPU in the configuration file located at: `config/config.yaml`.
