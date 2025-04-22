@@ -26,7 +26,7 @@ def setup_logger(log_path: str) -> None:
     console.setFormatter(formatter)
     logger.addHandler(console)
 
-    os.makedirs(os.path.dirname(log_path), exist_ok=True)
+    os.makedirs(log_path, exist_ok=True)
     handler = logging.FileHandler(f'{log_path}/log_file.log', 'w', 'utf-8')
     handler.setLevel(logging.INFO)
     handler.setFormatter(formatter)

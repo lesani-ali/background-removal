@@ -45,6 +45,6 @@ def remove_farther_objects(
 
     mask = depth_map < threshold
 
-    saliency_img[mask] = [255, 255, 255]
+    saliency_img[mask] = 255
 
     return saliency_img
