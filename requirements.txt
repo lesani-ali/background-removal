@@ -1,0 +1,16 @@
+# PyTorch
+torch==2.4.1
+torchaudio==2.4.1
+torchvision==0.19.1
+
+# Standard PyPI packages
+opencv-python
+matplotlib
+Pillow
+huggingface_hub
+tqdm==4.64.1
+timm==1.0.3
+kornia==0.5.4
+
+# GitHub dependency
+transparent-background @ git+https://github.com/plemeri/transparent-background.git@eca4323cf8bcc60a795c2d662be44632a76cb60b

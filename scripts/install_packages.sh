@@ -57,7 +57,7 @@ echo -e "\n"
 echo "Installing basic packages ..."
 echo -e "\n"
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118  
-pip install opencv-python matplotlib Pillow gradio_imageslider gradio==4.14.0 huggingface_hub
+pip install opencv-python matplotlib Pillow huggingface_hub
 echo "Basic packages are installed successfully." 
 
 echo -e "\n\n\n" >> "$log_file"

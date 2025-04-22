@@ -8,9 +8,9 @@ import argparse
 import logging
 import warnings
 from types import SimpleNamespace
-from pipeline.pipeline import BackgroundRemovalPipeline
-from util.experiment_utils import setup_logger, load_config
-from util.inference import run_inference
+from background_removal.pipeline.pipeline import BackgroundRemovalPipeline
+from background_removal.util.experiment_utils import setup_logger, load_config
+from background_removal.util.inference import run_inference
 
 sys.path.insert(0, './')
 
