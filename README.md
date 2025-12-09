@@ -1,4 +1,4 @@
-# Introduction
+# Image Background Removal 
 
 This project provides a tool for background removal by combining saliency masking and depth information.
 We use two third-party models: (1) [Transparent Background](https://github.com/plemeri/transparent-background) for generating saliency masks and (2) [Depth Anything](https://github.com/LiheYoung/Depth-Anything) for estimating the relative depth of the scene from a single image. The depth information helps the Transparent Background model to recover missed regions of the foreground, and remove farther objects that are likely part of the background. This improves background removal accuracy, especially in challenging scenes where the saliency mask alone may not be sufficient.
